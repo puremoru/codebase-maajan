@@ -36,7 +36,6 @@ const Home = () => {
 
     const idxs = scoreRow.flatMap((s, i) => (s!! ? i : []));
     if (idxs.length === 3) {
-      setInterval(() => {}, 100000);
       const targetIndex = [0, 1, 2, 3].find((a) => !idxs.includes(a));
       const currentSum = scoreRow.reduce((sum, currentElement) => {
         return sum + Number(currentElement);
