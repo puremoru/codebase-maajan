@@ -40,7 +40,7 @@ const Home = () => {
       const currentSum = scoreRow.reduce((sum, currentElement) => {
         return sum + Number(currentElement);
       }, 0);
-      if (!targetIndex) return;
+      if (!targetIndex && targetIndex !== 0) return;
       scoreRow[targetIndex] = String(0 - currentSum);
     }
     setScores([...scores.slice(0, row), scoreRow]);
