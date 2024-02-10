@@ -35,7 +35,6 @@ const Home = () => {
     scoreRow[col] = val;
 
     const idxs = scoreRow.flatMap((s, i) => (s!! ? i : []));
-    console.log(row);
     if (idxs.length === 3) {
       setInterval(() => {}, 100000);
       const targetIndex = [0, 1, 2, 3].find((a) => !idxs.includes(a));
