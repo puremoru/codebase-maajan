@@ -66,7 +66,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    if (!isInitialMounted) return;
+    if (!isInitialMounted || !persistedScores) return;
 
     const elements = persistedScores.split(","); // カンマで分割して配列に変換
     const numberOfRows = elements.length / 4; // 行数を計算
