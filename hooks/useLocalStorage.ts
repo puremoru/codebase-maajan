@@ -12,8 +12,6 @@ const useLocalStorage = (key: string, initValue: any) => {
     getLocalStorageValue(key, initValue)
   );
 
-  console.log(value);
-
   useEffect(() => {
     localStorage.setItem(key, value);
   }, [key, value]);
